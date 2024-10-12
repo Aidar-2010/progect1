@@ -1,8 +1,8 @@
 //
 //  UserModel.swift
-//  proect1
+//  Демо экзамен
 //
-//  Created by user on 12.10.2024.
+//  Created by Айдарова Оксана Николаевна on 12.10.2024.
 //
 
 import Foundation

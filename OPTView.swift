@@ -1,11 +1,9 @@
 //
 //  OPTView.swift
-//  progect1
+//  Демо экзамен
 //
-//  Created by user on 12.10.2024.
+//  Created by Айдарова Оксана Николаевна on 12.10.2024.
 //
-
-
 import SwiftUI
 struct OPTView: View {
 @State var isShowingHomeView = false
@@ -41,10 +39,8 @@ struct OPTView: View {
                         .padding(.leading)
                 }
                 .padding(.horizontal, 10)
-                //   CustomTextField(label: "Email Adress", placeholder: "****@mail.ru", text: $userViewModel.email)
                 
             }
-            
             HStack{
                 OTPField(code: $code_1 ,wrongCode: $wrongCode)
                 OTPField(code: $code_2 ,wrongCode: $wrongCode)
@@ -54,8 +50,6 @@ struct OPTView: View {
                 OTPField(code: $code_6 ,wrongCode: $wrongCode)
             }
             .padding(.bottom, 20)
-            
-            
             HStack{
                 Text("If you didn't receive code, resend after 0:\(timeRemaining < 10 ? "0" : "")\(timeRemaining)")
                     .onReceive(timer) { _ in
@@ -64,8 +58,6 @@ struct OPTView: View {
                         }
                     }
             }
-        
-    
                   .foregroundColor(.gray)
                   .font(.custom("Roboto-Light", size: 14))
                   .padding(.bottom, 30)
@@ -73,13 +65,6 @@ struct OPTView: View {
             Button("Set New Password")
             {
                 self.wrongCode = true
-                /*
-                if !userViewModel.email.isEmpty && !userViewModel.password.isEmpty{
-                //    userViewModel.signIn()
-                } else{
-                    self.isEmptyFields = true
-                }
-                 */
             }
             .padding(.horizontal, 100)
             .padding(.vertical, 20)
@@ -87,8 +72,6 @@ struct OPTView: View {
             .foregroundColor(.white)
             .font(.custom("Roboto-Medium", size: 18))
             .cornerRadius(8)
-          //  .padding()
-            
         }
         .alert(isPresented: $isEmptyFields){
             Alert(title: Text("Error"),
@@ -96,11 +79,8 @@ struct OPTView: View {
                   dismissButton: .default(Text("OK")))
         }
         Spacer()
-        
-       
     }
         .navigationBarBackButtonHidden()
- 
 }
 }
 

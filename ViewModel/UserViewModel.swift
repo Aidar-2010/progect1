@@ -1,31 +1,26 @@
 //
 //  UserViewModel.swift
-//  proect1
+//  Демо экзамен
 //
-//  Created by user on 12.10.2024.
+//  Created by Айдарова Оксана Николаевна on 12.10.2024.
 //
 
 import Foundation
 
-// class
+
 class UserViewModel: ObservableObject{
     
     @Published var user = UserModel(id: UUID(), name: "Ivanov", phone: "12345678", created_at: .now)
-    
     @Published  var email: String = ""
-        @Published  var password: String = ""
-        @Published  var confirmPassword: String = ""
-        
-        @Published  var isProgress: Bool = false
-        @Published var isNavigate: Bool = false
-        @Published  var error: Bool = false
+    @Published  var password: String = ""
+    @Published  var confirmPassword: String = ""
+    @Published  var isProgress: Bool = false
+    @Published var isNavigate: Bool = false
+    @Published  var error: Bool = false
     
         
     func signUp() {
-        
         if user.name != "" {
-
-            
             Task {
                 do {
                     await MainActor.run {

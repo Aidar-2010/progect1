@@ -1,12 +1,11 @@
 //
 //  CustomTextField.swift
-//  project1
+//  Демо экзамен
 //
-//  Created by user on 12.10.2024.
+//  Created by Айдарова Оксана Николаевна on 12.10.2024.
 //
 
 import SwiftUI
-
 struct CustomTextField: View{
     let label: String
     let placeholder: String
@@ -19,7 +18,6 @@ struct CustomTextField: View{
                 .padding(.leading, 30)
         }
         VStack(alignment: .leading){
-           
             ZStack{
                 TextField(placeholder, text: $text)
                     .padding()

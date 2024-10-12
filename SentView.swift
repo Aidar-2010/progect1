@@ -1,8 +1,8 @@
 //
 //  SentView.swift
-//  progect1
+//  Демо экзамен
 //
-//  Created by user on 12.10.2024.
+//  Created by Айдарова Оксана Николаевна on 12.10.2024.
 //
 
 import SwiftUI
@@ -38,7 +38,6 @@ var body: some View {
             Button("Sent OTP")
             {
                 if !userViewModel.email.isEmpty && !userViewModel.password.isEmpty{
-                //    userViewModel.signIn()
                 } else{
                     self.isEmptyFields = true
                 }
@@ -49,8 +48,6 @@ var body: some View {
             .foregroundColor(.white)
             .font(.custom("Roboto-Medium", size: 18))
             .cornerRadius(8)
-          //  .padding()
-            
         }
         .alert(isPresented: $isEmptyFields){
             Alert(title: Text("Error"),
@@ -72,7 +69,6 @@ var body: some View {
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 .padding(.bottom, 40)
         }
-       
     }
         .navigationBarBackButtonHidden()
 }

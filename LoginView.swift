@@ -1,8 +1,8 @@
 //
 //  LoginView.swift
-//  progect1
+//  Демо экзамен
 //
-//  Created by user on 12.10.2024.
+//  Created by Айдарова Оксана Николаевна on 12.10.2024.
 //
 
 import SwiftUI
@@ -25,7 +25,7 @@ struct LoginView: View {
                     Text("Welcome Back")
                         .foregroundColor(.black)
                         .font(.custom("Roboto-Medium", size: 28))
-                        .padding(.bottom, 1)
+                        .padding(.bottom, 5)
                         .padding(.leading)
                     Text("Fill in your email and password to continue")
                         .foregroundColor(.gray)
@@ -87,7 +87,7 @@ struct LoginView: View {
              //   NavigationLink("Sign UP",destination: SentView())
                 .padding(.bottom, 16)
                 Text("or log in using")
-                    .padding(.bottom, 3)
+                    .padding(.bottom, 100)
                 Image(systemName: "house")
                     .font(.system(size: 14))
                     .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
